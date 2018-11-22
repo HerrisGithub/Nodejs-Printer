@@ -11,6 +11,7 @@ var app = express();
 var port = 2000;
 var server = http.createServer(app);
 var cors = require('cors')
+
 app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());

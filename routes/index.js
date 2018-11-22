@@ -45,9 +45,13 @@ router.get('/printfile/:printerName/:fileName', async(req,res)=>{
     res.send(400)
   }
 })
-router.post('/print', (req,res)=>{
-  console.log(req.body)
-  return req.body
+router.post('/create', async (req,res)=>{
+  try {
+    const _response = await util.createReceipt('',40,'-')
+    res.send(_response)
+  } catch (error) {
+    res.send(400)
+  }
 })
 
 module.exports = router;

@@ -13,6 +13,19 @@ var util = {
             })
         })
     },
+    printFileMac: function (printerName, fileName) {
+        return new Promise((resolve, reject) => {
+            printerName = printerName.replace(/ /g,'_')
+            childProcess(`lp -d ${printerName} ${fileName}.txt`, function (err, stdout, stderr) {
+                if (err) {
+                    console.error(err);
+                    reject(false)
+                }
+                resolve(true)
+            })
+        })
+    },
+    
     writeFile: function (fileName, content) {
         return new Promise((resolve, reject) => {
             fs.writeFile(`${fileName}.txt`, content, function (err) {

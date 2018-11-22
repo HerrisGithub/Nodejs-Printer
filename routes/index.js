@@ -25,9 +25,14 @@ router.post('/writefile', async (req, res, next)=> {
 router.post('/writeprint', async (req,res)=>{
   try {
     await util.writeFile(req.body.fileName, req.body.content)
-    await util.printFileWindows(req.body.printerName, req.body.fileName)
+    if(process.platform=='darwin' || process.platform == 'linux'){
+      await util.printFileMac(req.body.printerName, req.body.fileName)
+    }else if(process.platform=='win32'){
+      await util.printFileWindows(req.body.printerName, req.body.fileName)
+    }
     res.send('selamat')
   } catch (error) {
+    console.log(error)
     res.send(400)
   }
 })

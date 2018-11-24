@@ -8,7 +8,7 @@ var reportRouter = require('./routes/report');
 var bodyParser = require('body-parser')
 var http = require('http');
 var app = express();
-var port = 2000;
+var port = 3000;
 var server = http.createServer(app);
 var cors = require('cors')
 

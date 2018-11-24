@@ -23,6 +23,7 @@ router.post('/writefile', async (req, res, next)=> {
  * @param {printerName}
  */
 router.post('/writeprint', async (req,res)=>{
+  console.log(req.body)
   try {
     await util.writeFile(req.body.FileName, req.body.Content)
     if(process.platform=='darwin' || process.platform == 'linux'){

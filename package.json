@@ -7,14 +7,21 @@
   },
   "dependencies": {
     "body-parse": "^0.1.0",
+    "canvas": "^2.1.0",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "fs": "0.0.1-security",
     "http-errors": "~1.6.2",
+    "install": "^0.12.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "receipt": "^1.4.0"
+    "npm": "^6.4.1",
+    "pdfkit": "^0.8.3",
+    "receipt": "^1.4.0",
+    "text2png": "^2.1.0",
+    "underscore": "^1.9.1",
+    "word-wrap": "^1.2.3"
   }
 }

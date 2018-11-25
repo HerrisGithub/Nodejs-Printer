@@ -37,4 +37,22 @@ server.listen(port);
 server.on('listening', ()=>{
   console.log(`Listening on port ${ server.address().port}`)
 });
+// var fs = require('fs');
+// var text2png = require('text2png');
+// var wrap = require('word-wrap');
+// const a = wrap('Lorem ipsum dolor sit amet\nconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', {width: 30, indent: '      '})
+// console.log(a)
+// fs.writeFileSync('out.png', 
+//   text2png(
+//   a, {
+//     font: '30px Futura',
+//     color: 'purple',
+//     backgroundColor: 'white',
+//     lineSpacing: 10,
+//     padding: 20
+//   })
+// );
+
+
+
 module.exports = app;

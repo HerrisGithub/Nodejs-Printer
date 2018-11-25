@@ -4,7 +4,7 @@ var fs = require('fs'),
 var util = {
     printFileWindows: function (printerName, fileName) {
         return new Promise((resolve, reject) => {
-            childProcess(`print /d:\\\\%COMPUTERNAME%\\${printerName} ${fileName}.txt`, function (err, stdout, stderr) {
+            childProcess(`print /d:\\\\%COMPUTERNAME%\\${printerName} ${fileName}`, function (err, stdout, stderr) {
                 if (err) {
                     console.error(err);
                     reject(false)
@@ -16,7 +16,7 @@ var util = {
     printFileMac: function (printerName, fileName) {
         return new Promise((resolve, reject) => {
             printerName = printerName.replace(/ /g,'_')
-            childProcess(`lp -d ${printerName} ${fileName}.txt`, function (err, stdout, stderr) {
+            childProcess(`lp -d ${printerName} ${fileName}`, function (err, stdout, stderr) {
                 if (err) {
                     console.error(err);
                     reject(false)

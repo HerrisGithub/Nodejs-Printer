@@ -20,7 +20,6 @@
     "npm": "^6.4.1",
     "pdfkit": "^0.8.3",
     "receipt": "^1.4.0",
-    "text2png": "^2.1.0",
     "underscore": "^1.9.1",
     "word-wrap": "^1.2.3"
   }
